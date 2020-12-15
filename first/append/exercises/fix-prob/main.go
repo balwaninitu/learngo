@@ -17,8 +17,6 @@ func main() {
 
 	sort.Ints(nums[:])
 
-	fmt.Println(nums)
-
 	fmt.Printf("%q\n", names)
 
 	fmt.Printf("%q\n", books)
