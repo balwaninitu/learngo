@@ -12,7 +12,7 @@ func main() {
 
 	if len(args) != 2 {
 
-		fmt.Println("Give me the size of table")
+		fmt.Println("give me size of tabele")
 
 		return
 	}
@@ -31,7 +31,6 @@ func main() {
 	for i := 0; i <= n; i++ {
 
 		fmt.Printf("%5d", i)
-
 	}
 
 	fmt.Println()
@@ -43,6 +42,7 @@ func main() {
 		for j := 0; j <= n; j++ {
 
 			fmt.Printf("%5d", i*j)
+
 		}
 
 		fmt.Println()
