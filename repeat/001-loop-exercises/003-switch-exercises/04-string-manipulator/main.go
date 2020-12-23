@@ -19,17 +19,17 @@ func main() {
 
 	var res string
 
-	switch {
+	switch cmd {
 
-	case cmd == "lower":
+	case "lower":
 
 		res = strings.ToLower(str)
 
-	case cmd == "upper":
+	case "upper":
 
 		res = strings.ToUpper(str)
 
-	case cmd == "title":
+	case "title":
 
 		res = strings.ToTitle(str)
 
