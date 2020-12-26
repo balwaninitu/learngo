@@ -10,6 +10,8 @@ func main() {
 
 	args := os.Args[1:]
 
+oLoop:
+
 	for _, a := range args {
 
 		n, err := strconv.Atoi(a)
@@ -36,7 +38,7 @@ func main() {
 
 			if n%i == 0 {
 
-				continue
+				continue oLoop
 			}
 
 			i += w
