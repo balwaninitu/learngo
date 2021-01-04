@@ -8,23 +8,24 @@ func main() {
 
 	var sum float64
 
-	for _, w := range weights {
+	// for _, w := range weights {
 
-		sum += w
+	// 	sum += w
 
-	}
-
-	fmt.Println(sum)
-
-	fmt.Printf("Average : %.2f\n", sum/float64(len(weights)))
-
-	// for i := 0; i <= len(weights); i++ {
-
-	// 	sum = sum + i
 	// }
 
 	// fmt.Println(sum)
 
-	// fmt.Printf("Average : %d", sum/len(weights))
+	// fmt.Printf("Average : %.2f\n", sum/float64(len(weights)))
+
+	for i := 0; i < len(weights); i++ {
+
+		sum += weights[i]
+
+		fmt.Printf("sum %.2f\n", sum)
+
+	}
+
+	fmt.Printf("Average : %.2f\n", sum/float64(len(weights)))
 
 }
