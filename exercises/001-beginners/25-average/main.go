@@ -27,44 +27,36 @@ import "fmt"
 
 func main() {
 
-	class1 := []int{86, 80, 75, 82, 80, 70}
-	class2 := []int{40, 55, 60, 48, 50}
-	class3 := []int{90, 85, 30, 86, 78, 75, 54}
+	s2 := [][]int{
+		{86, 80, 75, 82, 80, 70},
+		{40, 55, 60, 48, 50},
+		{90, 85, 30, 86, 78, 75, 54},
+	}
 
-	var sum1, sum2, sum3 float64
+	rows := len(s2)
 
-	for _, v := range class1 {
+	var totalSum int
 
-		sum1 += float64(v)
+	var totalLen int
+
+	for i := 0; i < rows; i++ {
+		sum := 0
+		for j := 0; j < len(s2[i]); j++ {
+			sum = sum + s2[i][j]
+		}
+
+		totalSum = totalSum + sum
+
+		totalLen = totalLen + len(s2[i])
+
+		avg1 := float64(sum) / float64(len(s2[i]))
+
+		fmt.Printf("Average of class %d is %.2f\n", i, avg1)
 
 	}
 
-	ave1 := sum1 / float64(len(class1))
+	totalAvg := totalSum / totalLen
 
-	fmt.Printf("Average mark of class 1 is %.2f\n", ave1)
-
-	for _, v := range class2 {
-
-		sum2 += float64(v)
-
-	}
-
-	ave2 := sum2 / float64(len(class2))
-
-	fmt.Printf("Average mark of class 2 is %.2ff\n", ave2)
-
-	for _, v := range class3 {
-
-		sum3 += float64(v)
-
-	}
-
-	ave3 := sum3 / float64(len(class3))
-
-	fmt.Printf("Average mark of class 3 is %.2ff\n", ave3)
-
-	avg := ave1 + ave2 + ave3
-
-	fmt.Printf("Average mark for all 3 classes  is %.2f\n", avg/3)
+	fmt.Printf("Average of all class is %d\n", totalAvg)
 
 }
